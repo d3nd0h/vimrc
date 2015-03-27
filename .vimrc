@@ -153,6 +153,7 @@ Plugin 'phildawes/racer'						" Rust auto completer
 Plugin 'wting/rust.vim'							" Rust syntax highlighting
 Plugin 'myusuf3/numbers.vim'					" Relative number line
 Plugin 'tpope/vim-surround'						" Insert text in surrounding selected text
+Plugin 'groenewege/vim-less'          			" Less syntax highlighting
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
