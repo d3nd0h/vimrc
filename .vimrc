@@ -17,7 +17,7 @@ set autoindent					" always set autoindenting on
 set copyindent					" copy the previous indentation on autoindenting
 set shiftwidth=4				" number of spaces to use for autoindenting
 set encoding=utf-8
-set linespace=0					" space between lines
+set linespace=2					" space between lines
 set hlsearch					" highlight search terms
 set hidden						" Do not delete undo history when switching between buffers
 set nobackup
@@ -27,6 +27,7 @@ set guioptions -=r  			" remove right-hand scroll bar
 set guioptions -=L  			" remove left-hand scroll bar
 set guioptions -=m  			" remove menu bar
 set guioptions -=M 				" remove menu bar
+set completeopt-=preview		" remove window information hint (on top of main window) after we use tab when autocomplete pops out
 
 filetype off				  	" required
 
@@ -192,6 +193,8 @@ filetype plugin indent on    " required
 " Eclim autocomplete with youcompleteme
 let g:EclimCompletionMethod = 'omnifunc'
 
+" YouCompleteMe
+
 " vim-go
 let g:go_highlight_operators = 1
 let g:go_highlight_functions = 1
@@ -203,10 +206,11 @@ let g:go_highlight_structs = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|vendor)|(\.(swp|ico|git|svn))$'
 
 " NerdTree
-let NERDTreeShowHidden = 1
-let NERDTreeSortOrder = ['\/$', '*', '\.toml']
-let NERDTreeDirArrows = 0
-let NERDTreeIgnore = ['.git[[dir]]']
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeSortOrder = ['\/$', '*', '\.toml']
+let g:NERDTreeDirArrows = 0
+let g:NERDTreeIgnore = ['.git[[dir]]']
+let g:NERDSpaceDelims = 1
 
 " Airline
 " Go to https://github.com/powerline/fonts if airline fonts is ugly
@@ -216,6 +220,10 @@ let g:airline_theme='luna'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let airline#extensions#tabline#buffer_nr_show = 1
+
+" Vim web dev icons
+let g:webdevicons_enable_nerdtree = 0
+let g:webdevicons_enable_airline_tabline = 0
 
 " Minibuffer explorer
 let g:miniBufExplorerAutoStart = 0 		"Just need the command :MBEbd to close current buffer and retain NERDTree
