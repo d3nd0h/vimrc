@@ -31,6 +31,7 @@ set completeopt-=preview		" remove window information hint (on top of main windo
 
 filetype off				  	" required
 
+syntax enable
 autocmd FileType html :setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript :setlocal shiftwidth=2 tabstop=2
 
