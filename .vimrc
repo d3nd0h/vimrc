@@ -5,7 +5,12 @@ colorscheme clearance
 
 " set below font after install the patched fonts @line 158
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 13
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
+
+if has("gui_macvim")
+  set guifont=DejaVu_Sans_Mono_for_Powerline:h13
+endif
+
 set tabstop=4					" Set tab size to 4
 set nocompatible				" be improved, required
 set number						" turn on number lines
