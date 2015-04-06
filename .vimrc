@@ -36,9 +36,17 @@ set completeopt-=preview		" remove window information hint (on top of main windo
 
 filetype off				  	" required
 
-syntax enable
-autocmd FileType html :setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript :setlocal shiftwidth=2 tabstop=2
+syntax on
+
+" Filetypes
+augroup filetypedetect
+  au! BufRead,BufNewFile *.hbs,*.handlebars setf handlebars
+augroup END
+
+
+autocmd FileType html :setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript :setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType handlebars :setlocal shiftwidth=2 tabstop=2 expandtab
 
 " automatically trim trailing space everytime we save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -47,7 +55,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 highlight Cursor guibg=white
 
 " Change cursor color to green when in insert mode
-au InsertLeave * hi Cursor guibg=white
 au InsertEnter * hi Cursor guibg=green
 
 if !has('gui_running')
@@ -162,6 +169,7 @@ Plugin 'myusuf3/numbers.vim'					" Relative number line
 Plugin 'tpope/vim-surround'						" Insert text in surrounding selected text
 Plugin 'groenewege/vim-less'          			" Less syntax highlighting
 Plugin 'skammer/vim-css-color'					" Highlight css hex code based on its hex code(color)
+Plugin 'mustache/vim-mustache-handlebars'		" Highlight handlebars
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
@@ -201,6 +209,9 @@ filetype plugin indent on    " required
 let g:EclimCompletionMethod = 'omnifunc'
 
 " YouCompleteMe
+
+" Vim handlebars
+let g:mustache_abbreviations = 1
 
 " vim-go
 let g:go_highlight_operators = 1
