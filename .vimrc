@@ -48,6 +48,7 @@ augroup END
 autocmd FileType html :setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType javascript :setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType handlebars :setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType less :setlocal shiftwidth=2 tabstop=2 expandtab
 
 " automatically trim trailing space everytime we save
 autocmd BufWritePre * :%s/\s\+$//e
