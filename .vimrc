@@ -5,8 +5,14 @@ colorscheme clearance
 
 " set below font after install the patched fonts @line 158
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 13
+
+" Ubuntu font
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 
+" Linux mint font
+set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 15
+
+" Mac font
 if has("gui_macvim")
   set guifont=DejaVu_Sans_Mono_for_Powerline:h13
 endif
