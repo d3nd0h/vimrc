@@ -11,30 +11,31 @@ if has("gui_macvim")
   set guifont=DejaVu_Sans_Mono_for_Powerline:h13
 endif
 
-set tabstop=4					" Set tab size to 4
-set nocompatible				" be improved, required
-set number						" turn on number lines
-set showcmd						" show command on pressing keystrokes
-set autoindent					" enables auto indentation
-set ruler						" enables rule<LeftMouse>
-set nowrap						" don't wrap lines
-set autoindent					" always set autoindenting on
-set copyindent					" copy the previous indentation on autoindenting
-set shiftwidth=4				" number of spaces to use for autoindenting
+set tabstop=4                   " Set tab size to 4
+set nocompatible                " be improved, required
+set number                      " turn on number lines
+set showcmd                     " show command on pressing keystrokes
+set autoindent                  " enables auto indentation
+set ruler                       " enables rule<LeftMouse>
+set nowrap                      " don't wrap lines
+set autoindent                  " always set autoindenting on
+set copyindent                  " copy the previous indentation on autoindenting
+set shiftwidth=4                " number of spaces to use for autoindenting
 set encoding=utf-8
-set linespace=2					" space between lines
-set hlsearch					" highlight search terms
-set hidden						" Do not delete undo history when switching between buffers
+set linespace=2                 " space between lines
+set hlsearch                    " highlight search terms
+set hidden                      " Do not delete undo history when switching between buffers
 set nobackup
 set noswapfile
-set guioptions -=T		 		" remove toolbar on gvim
-set guioptions -=r  			" remove right-hand scroll bar
-set guioptions -=L  			" remove left-hand scroll bar
-set guioptions -=m  			" remove menu bar
-set guioptions -=M 				" remove menu bar
-set completeopt-=preview		" remove window information hint (on top of main window) after we use tab when autocomplete pops out
+set guioptions -=T              " remove toolbar on gvim
+set guioptions -=r              " remove right-hand scroll bar
+set guioptions -=L              " remove left-hand scroll bar
+set guioptions -=m              " remove menu bar
+set guioptions -=M              " remove menu bar
+set completeopt-=preview        " remove window information hint (on top of main window) after we use tab when autocomplete pops out
+set expandtab                   " Indentation using space
 
-filetype off				  	" required
+filetype off                    " required
 
 syntax on
 
@@ -58,7 +59,7 @@ highlight Cursor guibg=white
 au InsertEnter * hi Cursor guibg=green
 
 if !has('gui_running')
-	set t_Co=256
+    set t_Co=256
 endif
 
 
@@ -131,50 +132,50 @@ nnoremap <F7> :NumbersOnOff<CR>
 """"""""""""""""""""""""""""""""""""""""""""
 " Load Plugins
 """"""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/Vundle.vim 			" set the runtime path to include Vundle and initialize
-call vundle#begin() 						" alternatively, pass a path where Vundle should install plugins
-											" call vundle#begin('~/some/path/here')
+set rtp+=~/.vim/bundle/Vundle.vim               " set the runtime path to include Vundle and initialize
+call vundle#begin()                             " alternatively, pass a path where Vundle should install plugins
+                                                " call vundle#begin('~/some/path/here')
 
 "YouCompleteMe only works in linux/Mac OSX
 if has('unix')
-	Plugin 'Valloric/YouCompleteMe' 		" auto popup for autocomplete, without this we need to press <Ctrl+x+o>
+    Plugin 'Valloric/YouCompleteMe'             " auto popup for autocomplete, without this we need to press <Ctrl+x+o>
 endif
 
-Plugin 'gmarik/Vundle.vim' 						" let Vundle manage Vundle, required
-Plugin 'flazz/vim-colorschemes' 				" vim colorschemes
-Plugin 'fatih/vim-go' 							" Go programming language
-Plugin 'bling/vim-airline'						" Beautiful status bars
-Plugin 'fholgado/minibufexpl.vim'				" Using it for deleting buffer fastly
-Plugin 'kien/ctrlp.vim'							" Fast file finder just like sublime ctrl+p
-Plugin 'scrooloose/nerdtree' 					" Plugin for listing directory structure
-Plugin 'scrooloose/nerdcommenter' 				" Commenter
-Plugin 'majutsushi/tagbar' 						" Plugin for showing functions and vars description
-Plugin 'tpope/vim-fugitive' 					" Plugin for git inside vim
-Plugin 'scrooloose/syntastic' 					" Plugin for error highlighter
-Plugin 'Townk/vim-autoclose' 					" Plugin for autoclose brace () {}
-Plugin 'terryma/vim-multiple-cursors' 			" Multiple selection just like in sublime Ctrl + d selection
-Plugin 'jelera/vim-javascript-syntax'			" Javascript indentation + Syntax
-Plugin 'othree/javascript-libraries-syntax.vim' " Javascript syntax for libs
-Plugin 'godlygeek/tabular'						" Automatic alignment
-Plugin 'SirVer/ultisnips'						" Code snippets
-Plugin 'shawncplus/phpcomplete.vim'				" PHP completion
-Plugin 'cespare/vim-toml'						" TOML syntax highlighting
-Plugin 'plasticboy/vim-markdown'				" Markdown
-Plugin 'mattn/emmet-vim'						" Emmet plugin
-Plugin 'gregsexton/MatchTag'					" Highlight matched tag
-Plugin 'tmhedberg/matchit'						" Jump between matched tags
-Plugin 'phildawes/racer'						" Rust auto completer
-Plugin 'wting/rust.vim'							" Rust syntax highlighting
-Plugin 'myusuf3/numbers.vim'					" Relative number line
-Plugin 'tpope/vim-surround'						" Insert text in surrounding selected text
-Plugin 'groenewege/vim-less'          			" Less syntax highlighting
-Plugin 'skammer/vim-css-color'					" Highlight css hex code based on its hex code(color)
-Plugin 'mustache/vim-mustache-handlebars'		" Highlight handlebars
+Plugin 'gmarik/Vundle.vim'                          " let Vundle manage Vundle, required
+Plugin 'flazz/vim-colorschemes'                     " vim colorschemes
+Plugin 'fatih/vim-go'                               " Go programming language
+Plugin 'bling/vim-airline'                          " Beautiful status bars
+Plugin 'fholgado/minibufexpl.vim'                   " Using it for deleting buffer fastly
+Plugin 'kien/ctrlp.vim'                             " Fast file finder just like sublime ctrl+p
+Plugin 'scrooloose/nerdtree'                        " Plugin for listing directory structure
+Plugin 'scrooloose/nerdcommenter'                   " Commenter
+Plugin 'majutsushi/tagbar'                          " Plugin for showing functions and vars description
+Plugin 'tpope/vim-fugitive'                         " Plugin for git inside vim
+Plugin 'scrooloose/syntastic'                       " Plugin for error highlighter
+Plugin 'Townk/vim-autoclose'                        " Plugin for autoclose brace () {}
+Plugin 'terryma/vim-multiple-cursors'               " Multiple selection just like in sublime Ctrl + d selection
+Plugin 'jelera/vim-javascript-syntax'               " Javascript indentation + Syntax
+Plugin 'othree/javascript-libraries-syntax.vim'     " Javascript syntax for libs
+Plugin 'godlygeek/tabular'                          " Automatic alignment
+Plugin 'SirVer/ultisnips'                           " Code snippets
+Plugin 'shawncplus/phpcomplete.vim'                 " PHP completion
+Plugin 'cespare/vim-toml'                           " TOML syntax highlighting
+Plugin 'plasticboy/vim-markdown'                    " Markdown
+Plugin 'mattn/emmet-vim'                            " Emmet plugin
+Plugin 'gregsexton/MatchTag'                        " Highlight matched tag
+Plugin 'tmhedberg/matchit'                          " Jump between matched tags
+Plugin 'phildawes/racer'                            " Rust auto completer
+Plugin 'wting/rust.vim'                             " Rust syntax highlighting
+Plugin 'myusuf3/numbers.vim'                        " Relative number line
+Plugin 'tpope/vim-surround'                         " Insert text in surrounding selected text
+Plugin 'groenewege/vim-less'                        " Less syntax highlighting
+Plugin 'skammer/vim-css-color'                      " Highlight css hex code based on its hex code(color)
+Plugin 'mustache/vim-mustache-handlebars'           " Highlight handlebars
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
 " Copy fonts in patched-fonts folder to ~/.fonts
-Plugin 'ryanoasis/vim-webdevicons'				" If error with airline, reinstall airline to fix
+Plugin 'ryanoasis/vim-webdevicons'                  " If error with airline, reinstall airline to fix
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -244,7 +245,7 @@ let g:webdevicons_enable_nerdtree = 0
 let g:webdevicons_enable_airline_tabline = 0
 
 " Minibuffer explorer
-let g:miniBufExplorerAutoStart = 0 		"Just need the command :MBEbd to close current buffer and retain NERDTree
+let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to close current buffer and retain NERDTree
 
 " Syntatic
 let g:syntastic_echo_current_error = 1
@@ -327,6 +328,4 @@ let g:tagbar_type_go = {
 " Highlight current line number
 hi CursorLineNR guifg=#F2FF5C gui=bold "
 
-hi link rustStorage 		PreProc
-
-
+hi link rustStorage         PreProc
