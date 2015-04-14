@@ -10,7 +10,10 @@ colorscheme clearance
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 
 " Linux mint font
-set guifont=Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 15
+" add use 'Linux Mint\n' because shell output appends \n
+if (system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 15
+endif
 
 " Mac font
 if has("gui_macvim")
