@@ -182,6 +182,7 @@ Plugin 'groenewege/vim-less'                        " Less syntax highlighting
 Plugin 'skammer/vim-css-color'                      " Highlight css hex code based on its hex code(color)
 Plugin 'mustache/vim-mustache-handlebars'           " Highlight handlebars
 Plugin 'mileszs/ack.vim'                            " For searching, install http://beyondgrep.com/install first
+Plugin 'digitaltoad/vim-jade.git'                   " Jade template syntax highlight
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
