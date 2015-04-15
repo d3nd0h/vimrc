@@ -239,7 +239,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|vendor)|(\.(sw
 " NerdTree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeSortOrder = ['\/$', '*', '\.toml']
-let g:NERDTreeDirArrows = 0
+let g:NERDTreeDirArrows = 1
 let g:NERDTreeIgnore = ['.git[[dir]]']
 let g:NERDSpaceDelims = 1
 
