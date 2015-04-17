@@ -183,6 +183,7 @@ Plugin 'skammer/vim-css-color'                      " Highlight css hex code bas
 Plugin 'mustache/vim-mustache-handlebars'           " Highlight handlebars
 Plugin 'mileszs/ack.vim'                            " For searching, install http://beyondgrep.com/install first
 Plugin 'digitaltoad/vim-jade.git'                   " Jade template syntax highlight
+Plugin 'editorconfig/editorconfig-vim'              " Vim will read .editorconfig and set the configuration based on it
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
