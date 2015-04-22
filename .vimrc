@@ -265,6 +265,7 @@ let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_error_symbol = "•"
+let g:syntastic_javascript_checkers = ['jshint']
 
 " Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
