@@ -17,7 +17,7 @@ endif
 
 " Mac font
 if has("gui_macvim")
-  set guifont=DejaVu_Sans_Mono_for_Powerline:h13
+  set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
 endif
 
 set tabstop=4                   " Set tab size to 4
@@ -54,10 +54,11 @@ augroup filetypedetect
 augroup END
 
 
-autocmd FileType html :setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType javascript :setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType handlebars :setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType less :setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType html       : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType handlebars : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType less       : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType python     : setlocal shiftwidth=4 tabstop=4 expandtab
 
 " automatically trim trailing space everytime we save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -137,6 +138,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <F6> :NumbersToggle<CR>
 nnoremap <F7> :NumbersOnOff<CR>
 
+nnoremap <silent> <leader>nn :NERDTreeToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""
