@@ -9,14 +9,17 @@ colorscheme clearance
 " Ubuntu font
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 
+let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n"
+let in_macvim = has("gui_macvim")
+
 " Linux mint font
 " add use 'Linux Mint\n' because shell output appends \n
-if (system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n")
+if (in_linux_mint)
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 15
 endif
 
 " Mac font
-if has("gui_macvim")
+if in_macvim
   set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
 endif
 
@@ -226,6 +229,9 @@ filetype plugin indent on    " required
 let g:EclimCompletionMethod = 'omnifunc'
 
 " YouCompleteMe
+if in_macvim
+    let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+endif
 
 " Vim handlebars
 let g:mustache_abbreviations = 1
