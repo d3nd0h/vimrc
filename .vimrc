@@ -9,15 +9,18 @@ colorscheme clearance
 " Ubuntu font
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 
+let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n"
+let in_macvim = has("gui_macvim")
+
 " Linux mint font
 " add use 'Linux Mint\n' because shell output appends \n
-if (system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n")
+if (in_linux_mint)
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 15
 endif
 
 " Mac font
-if has("gui_macvim")
-  set guifont=DejaVu_Sans_Mono_for_Powerline:h13
+if in_macvim
+  set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
 endif
 
 set tabstop=4                   " Set tab size to 4
@@ -54,10 +57,11 @@ augroup filetypedetect
 augroup END
 
 
-autocmd FileType html :setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType javascript :setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType handlebars :setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType less :setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType html       : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType handlebars : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType less       : setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType python     : setlocal shiftwidth=4 tabstop=4 expandtab
 
 " automatically trim trailing space everytime we save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -140,6 +144,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <F6> :NumbersToggle<CR>
 nnoremap <F7> :NumbersOnOff<CR>
 
+nnoremap <silent> <leader>nn :NERDTreeToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -227,6 +232,9 @@ filetype plugin indent on    " required
 let g:EclimCompletionMethod = 'omnifunc'
 
 " YouCompleteMe
+if in_macvim
+    let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+endif
 
 " Vim handlebars
 let g:mustache_abbreviations = 1
