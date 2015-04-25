@@ -77,6 +77,9 @@ endif
 "MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""
 
+" Remap :w<CR> to Ctrl+s
+nnoremap <C-s> :w<CR>
+
 " Press F3 to check current element highlight-group
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
