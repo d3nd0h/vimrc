@@ -99,6 +99,12 @@ nnoremap 8`` :b 8 <CR>
 nnoremap 9`` :b 9 <CR>
 inoremap <C-[> <Esc><Esc><Esc><Esc>
 
+
+" use \" and \- to resize vertical splits
+nnoremap <silent> <leader>= :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
+
+
 " Press F5 to open a list of opened buffers and press <Enter> to open it
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
@@ -277,7 +283,7 @@ let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_error_symbol = "•"
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jsxhint', 'jshint']
 
 " Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
