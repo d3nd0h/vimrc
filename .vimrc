@@ -255,6 +255,7 @@ let g:go_highlight_structs = 1
 " Ctrl-P
 " ignore directories
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|vendor)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_prompt_mappings = { 'PrtClearCache()': ['<c-q>'] }
 
 " NerdTree
 let g:NERDTreeShowHidden = 1
@@ -285,6 +286,7 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_error_symbol = "•"
 let g:syntastic_javascript_checkers = ['jsxhint', 'jshint']
+let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 
 " Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
