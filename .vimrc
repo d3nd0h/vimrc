@@ -199,6 +199,7 @@ Plugin 'mileszs/ack.vim'                            " For searching, install htt
 Plugin 'digitaltoad/vim-jade.git'                   " Jade template syntax highlight
 Plugin 'editorconfig/editorconfig-vim'              " Vim will read .editorconfig and set the configuration based on it
 Plugin 'vim-ruby'                                   " Vim ruby plugin
+Plugin 'wakatime/vim-wakatime'                      " wakatime.com record time spent on vim
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
