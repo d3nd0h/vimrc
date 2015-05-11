@@ -116,6 +116,9 @@ nmap <silent> <leader>sv :so ~/.vimrc<CR>
 nmap <C-L> 5zl
 nmap <C-H> 5zh
 
+" Comment toggle on normal mode with Ctrl+C
+nmap <C-c> \c<space>
+
 " Ctrl+c = copy | Ctrl+v = paste
 " Only works in visual and insert mode to avoid conflict to visual-block key
 " <C-v> in normal mode
