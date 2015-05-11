@@ -363,5 +363,8 @@ let g:tagbar_type_go = {
 " Highlight current line number
 hi CursorLineNR guifg=#F2FF5C gui=bold "
 
-hi link rustStorage          PreProc
-hi link mustacheConditionals Function
+hi link rustStorage             PreProc
+hi link mustacheConditionals    Function
+hi link mustacheHelpers         Function
+hi link mustacheSection         Function
+hi link htmlLink                None
