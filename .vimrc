@@ -284,7 +284,7 @@ let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to clos
 let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
-let g:syntastic_error_symbol = "•"
+let g:syntastic_error_symbol = "●"
 let g:syntastic_javascript_checkers = ['jsxhint', 'jshint']
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 
