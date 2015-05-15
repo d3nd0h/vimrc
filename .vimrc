@@ -99,6 +99,8 @@ nnoremap 8`` :b 8 <CR>
 nnoremap 9`` :b 9 <CR>
 inoremap <C-[> <Esc><Esc><Esc><Esc>
 
+nnoremap L $
+nnoremap H ^
 
 " use \" and \- to resize vertical splits
 nnoremap <silent> <leader>= :vertical resize +5<CR>
