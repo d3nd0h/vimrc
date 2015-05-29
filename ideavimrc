@@ -35,4 +35,4 @@ inoremap <C-m> <Esc>:m .-2<CR>==gi
 vnoremap <C-b> :m '>+1<CR>gv=gvk
 vnoremap <C-m> :m '<-2<CR>gv=gvk<C-y>
 
-
+nnoremap QQ :q<CR>
