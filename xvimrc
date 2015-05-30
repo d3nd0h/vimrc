@@ -1,3 +1,5 @@
+set relativenumber
+
 " Remap :w<CR> to Ctrl+s
 nnoremap <C-s> :w<CR>
 
@@ -13,6 +15,7 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 
 " Mapping to move lines
+" NOTE: THESE MAPPINGS NEED TO BE CONFIGURED MANUALLY IN XCODE KEY BINDINGS
 " The command :m .+1 (which can be abbreviated to :m+)
 " moves the current line to after line number .+1 (current line number + 1).
 " That is, the current line is moved down one line.
@@ -28,9 +31,9 @@ imap <C-v> <C-r><C-o>+
 
 " The == re-indents the line to suit its new position.
 " For the visual-mode mappings, gv reselects the last visual block and = re-indents that block.
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+" nnoremap <C-j> :m .+1<CR>==
+" nnoremap <C-k> :m .-2<CR>==
+" inoremap <C-j> <Esc>:m .+1<CR>==gi
+" inoremap <C-k> <Esc>:m .-2<CR>==gi
+" vnoremap <C-j> :m '>+1<CR>gv=gv
+" vnoremap <C-k> :m '<-2<CR>gv=gv
