@@ -83,6 +83,7 @@ endif
 
 " Remap :w<CR> to Ctrl+s
 nnoremap <C-s> :w<CR>
+inoremap <C-s> <ESC>:w<CR>a
 
 " Press F3 to check current element highlight-group
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
@@ -184,12 +185,10 @@ Plugin 'scrooloose/syntastic'                       " Plugin for error highlight
 Plugin 'Townk/vim-autoclose'                        " Plugin for autoclose brace () {}
 Plugin 'terryma/vim-multiple-cursors'               " Multiple selection just like in sublime Ctrl + d selection
 Plugin 'jelera/vim-javascript-syntax'               " Javascript indentation + Syntax
-Plugin 'othree/javascript-libraries-syntax.vim'     " Javascript syntax for libs
 Plugin 'godlygeek/tabular'                          " Automatic alignment
 Plugin 'SirVer/ultisnips'                           " Code snippets
 Plugin 'shawncplus/phpcomplete.vim'                 " PHP completion
 Plugin 'cespare/vim-toml'                           " TOML syntax highlighting
-Plugin 'plasticboy/vim-markdown'                    " Markdown
 Plugin 'mattn/emmet-vim'                            " Emmet plugin
 Plugin 'gregsexton/MatchTag'                        " Highlight matched tag
 Plugin 'tmhedberg/matchit'                          " Jump between matched tags
@@ -201,10 +200,7 @@ Plugin 'groenewege/vim-less'                        " Less syntax highlighting
 Plugin 'skammer/vim-css-color'                      " Highlight css hex code based on its hex code(color)
 Plugin 'mustache/vim-mustache-handlebars'           " Highlight handlebars
 Plugin 'mileszs/ack.vim'                            " For searching, install http://beyondgrep.com/install first
-Plugin 'digitaltoad/vim-jade.git'                   " Jade template syntax highlight
 Plugin 'editorconfig/editorconfig-vim'              " Vim will read .editorconfig and set the configuration based on it
-Plugin 'vim-ruby'                                   " Vim ruby plugin
-Plugin 'wakatime/vim-wakatime'                      " wakatime.com record time spent on vim
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
