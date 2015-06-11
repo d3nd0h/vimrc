@@ -281,6 +281,9 @@ let g:webdevicons_enable_airline_tabline = 0
 " Minibuffer explorer
 let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to close current buffer and retain NERDTree
 
+" Vim emmet
+let g:user_emmet_leader_key=','
+
 " Syntatic
 let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
@@ -292,6 +295,7 @@ let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we c
 " Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" Ulti snip
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-tab>"
