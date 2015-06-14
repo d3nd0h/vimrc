@@ -23,6 +23,8 @@ if in_macvim
   set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
 endif
 
+set synmaxcol=120               " Syntax highlighting only the first 120 col
+set lazyredraw
 set tabstop=4                   " Set tab size to 4
 set nocompatible                " be improved, required
 set number                      " turn on number lines
