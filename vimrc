@@ -3,6 +3,10 @@
 """"""""""""""""""""""""""""""""""""""""""""
 colorscheme clearance
 
+if !has('gui_running')
+  colorscheme molokai
+endif
+
 " set below font after install the patched fonts @line 158
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 13
 
