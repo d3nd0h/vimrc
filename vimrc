@@ -35,7 +35,6 @@ set number                      " turn on number lines
 set showcmd                     " show command on pressing keystrokes
 set autoindent                  " enables auto indentation
 set ruler                       " enables rule<LeftMouse>
-set nowrap                      " don't wrap lines
 set autoindent                  " always set autoindenting on
 set copyindent                  " copy the previous indentation on autoindenting
 set shiftwidth=4                " number of spaces to use for autoindenting
@@ -53,8 +52,16 @@ set guioptions -=M              " remove menu bar
 set completeopt-=preview        " remove window information hint (on top of main window) after we use tab when autocomplete pops out
 set expandtab                   " Indentation using space
 
-filetype off                    " required
+" Word wrapping
+" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
+set wrap                        " Wrap lines, use `set nowrap` if you don't want to wrap
+set linebreak
+set nolist
+set formatoptions+=t
+set textwidth=0
+set wrapmargin=0
 
+filetype off                    " required
 syntax on
 
 " Filetypes
