@@ -1,7 +1,8 @@
 """"""""""""""""""""""""""""""""""""""""""""
 " Vim Settings
 """"""""""""""""""""""""""""""""""""""""""""
-colorscheme clearance
+
+colorscheme molokai         " clearance
 
 if !has('gui_running')
   colorscheme molokai
