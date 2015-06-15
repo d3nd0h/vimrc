@@ -81,10 +81,10 @@ autocmd FileType python     : setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Change cursor color to white
-highlight Cursor guibg=white
+highlight Cursor guibg=#618AFB guifg=white
 
 " Change cursor color to green when in insert mode
-au InsertEnter * hi Cursor guibg=green
+au InsertEnter * hi Cursor guibg=#618AFB guifg=white ctermbg=39 ctermfg=white
 
 if !has('gui_running')
     set t_Co=256
