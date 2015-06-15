@@ -1,31 +1,23 @@
 """"""""""""""""""""""""""""""""""""""""""""
 " Vim Settings
 """"""""""""""""""""""""""""""""""""""""""""
+let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n"
+let in_macvim = has("gui_macvim")
+let in_terminal = !has('gui_running')
 
 colorscheme molokai         " clearance
 
-if !has('gui_running')
-  colorscheme molokai
+if in_terminal
+    colorscheme molokai
+    set t_Co=256
 endif
 
-" set below font after install the patched fonts @line 158
-" set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 13
-
-" Ubuntu font
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
-
-let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n"
-let in_macvim = has("gui_macvim")
-
-" Linux mint font
-" add use 'Linux Mint\n' because shell output appends \n
-if (in_linux_mint)
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 15
-endif
-
-" Mac font
-if in_macvim
-  set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
+if in_linux_mint " Linux Mint
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 15
+elseif in_macvim " Mac
+    set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
+else
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 endif
 
 set synmaxcol=120               " Syntax highlighting only the first 120 col
@@ -86,9 +78,6 @@ highlight Cursor guibg=#618AFB guifg=white
 " Change cursor color to green when in insert mode
 au InsertEnter * hi Cursor guibg=#618AFB guifg=white ctermbg=39 ctermfg=white
 
-if !has('gui_running')
-    set t_Co=256
-endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -120,7 +109,6 @@ noremap H ^
 " use \" and \- to resize vertical splits
 nnoremap <silent> <leader>= :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
-
 
 " Press F5 to open a list of opened buffers and press <Enter> to open it
 nnoremap <F5> :buffers<CR>:buffer<Space>
