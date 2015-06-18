@@ -264,7 +264,7 @@ let g:ctrlp_prompt_mappings = { 'PrtClearCache()': ['<c-q>'] }
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeSortOrder = ['\/$', '*', '\.toml']
 let g:NERDTreeDirArrows = 1
-let g:NERDTreeIgnore = ['.git[[dir]]']
+let g:NERDTreeIgnore = ['.git[[dir]]', '.idea[[dir]]']
 let g:NERDSpaceDelims = 1
 
 " Airline
