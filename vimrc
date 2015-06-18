@@ -188,6 +188,7 @@ Plugin 'terryma/vim-multiple-cursors'               " Multiple selection just li
 Plugin 'jelera/vim-javascript-syntax'               " Javascript indentation + Syntax
 Plugin 'godlygeek/tabular'                          " Automatic alignment
 Plugin 'SirVer/ultisnips'                           " Code snippets
+Plugin 'honza/vim-snippets'                         " Collection of snippets for ultisnipes
 Plugin 'shawncplus/phpcomplete.vim'                 " PHP completion
 Plugin 'cespare/vim-toml'                           " TOML syntax highlighting
 Plugin 'mattn/emmet-vim'                            " Emmet plugin
