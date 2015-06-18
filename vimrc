@@ -53,8 +53,6 @@ set nolist
 set formatoptions+=t
 set textwidth=0
 set wrapmargin=0
-
-filetype off                    " required
 syntax on
 
 " Filetypes
@@ -164,6 +162,7 @@ nnoremap <silent> <leader>nn :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""
 " Load Plugins
 """"""""""""""""""""""""""""""""""""""""""""
+filetype off                                    " required
 set rtp+=~/.vim/bundle/Vundle.vim               " set the runtime path to include Vundle and initialize
 call vundle#begin()                             " alternatively, pass a path where Vundle should install plugins
                                                 " call vundle#begin('~/some/path/here')
