@@ -5,10 +5,10 @@ let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mi
 let in_macvim = has("gui_macvim")
 let in_terminal = !has('gui_running')
 
-colorscheme molokai         " clearance
+colorscheme custom
 
 if in_terminal
-    colorscheme molokai
+    colorscheme custom
     set t_Co=256
 endif
 
@@ -69,13 +69,6 @@ autocmd FileType python     : setlocal shiftwidth=4 tabstop=4 expandtab
 
 " automatically trim trailing space everytime we save
 autocmd BufWritePre * :%s/\s\+$//e
-
-" Change cursor color to white
-highlight Cursor guibg=#618AFB guifg=white
-
-" Change cursor color to green when in insert mode
-au InsertEnter * hi Cursor guibg=#618AFB guifg=white ctermbg=39 ctermfg=white
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -370,6 +363,13 @@ let g:tagbar_type_go = {
 " Highlight current line number
 hi CursorLineNR guifg=#F2FF5C gui=bold "
 hi SyntasticErrorSign guifg=#6d90d1
+
+" Change cursor color to white
+hi Cursor guibg=#618AFB guifg=white
+
+" Change cursor color to green when in insert mode
+au InsertEnter * hi Cursor guibg=#618AFB guifg=white ctermbg=39 ctermfg=white
+
 
 hi link rustStorage             PreProc
 hi link mustacheConditionals    Function
