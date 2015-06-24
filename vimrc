@@ -22,6 +22,7 @@ endif
 
 set synmaxcol=120               " Syntax highlighting only the first 120 col
 set lazyredraw
+set colorcolumn=80              " Show vertical ruler that at the 80th column
 set tabstop=4                   " Set tab size to 4
 set nocompatible                " be improved, required
 set number                      " turn on number lines
@@ -286,6 +287,8 @@ let g:syntastic_enable_balloons = 1
 let g:syntastic_error_symbol = "-"
 let g:syntastic_javascript_checkers = ['jsxhint', 'jshint']
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
+let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
+
 
 " Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
