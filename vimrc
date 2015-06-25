@@ -166,38 +166,38 @@ if has('unix')
     Plugin 'Valloric/YouCompleteMe'             " auto popup for autocomplete, without this we need to press <Ctrl+x+o>
 endif
 
-Plugin 'gmarik/Vundle.vim'                          " let Vundle manage Vundle, required
-Plugin 'flazz/vim-colorschemes'                     " vim colorschemes
-Plugin 'fatih/vim-go'                               " Go programming language
-Plugin 'bling/vim-airline'                          " Beautiful status bars
-Plugin 'fholgado/minibufexpl.vim'                   " Using it for deleting buffer fastly
-Plugin 'kien/ctrlp.vim'                             " Fast file finder just like sublime ctrl+p
-Plugin 'scrooloose/nerdtree'                        " Plugin for listing directory structure
-Plugin 'scrooloose/nerdcommenter'                   " Commenter
-Plugin 'majutsushi/tagbar'                          " Plugin for showing functions and vars description
-Plugin 'tpope/vim-fugitive'                         " Plugin for git inside vim
-Plugin 'scrooloose/syntastic'                       " Plugin for error highlighter
-Plugin 'Townk/vim-autoclose'                        " Plugin for autoclose brace () {}
-Plugin 'terryma/vim-multiple-cursors'               " Multiple selection just like in sublime Ctrl + d selection
-Plugin 'jelera/vim-javascript-syntax'               " Javascript indentation + Syntax
-Plugin 'godlygeek/tabular'                          " Automatic alignment
-Plugin 'SirVer/ultisnips'                           " Code snippets
-Plugin 'honza/vim-snippets'                         " Collection of snippets for ultisnipes
-Plugin 'shawncplus/phpcomplete.vim'                 " PHP completion
-Plugin 'cespare/vim-toml'                           " TOML syntax highlighting
-Plugin 'mattn/emmet-vim'                            " Emmet plugin
-Plugin 'gregsexton/MatchTag'                        " Highlight matched tag
-Plugin 'tmhedberg/matchit'                          " Jump between matched tags
-Plugin 'phildawes/racer'                            " Rust auto completer
-Plugin 'wting/rust.vim'                             " Rust syntax highlighting
-Plugin 'myusuf3/numbers.vim'                        " Relative number line
-Plugin 'tpope/vim-surround'                         " Insert text in surrounding selected text
-Plugin 'groenewege/vim-less'                        " Less syntax highlighting
-Plugin 'skammer/vim-css-color'                      " Highlight css hex code based on its hex code(color)
-Plugin 'mustache/vim-mustache-handlebars'           " Highlight handlebars
-Plugin 'mileszs/ack.vim'                            " For searching, install http://beyondgrep.com/install first
-Plugin 'editorconfig/editorconfig-vim'              " Vim will read .editorconfig and set the configuration based on it
-Plugin 'xsbeats/vim-blade'                                  " Laravel blade syntax highlighting
+Plugin 'gmarik/Vundle.vim'                      " let Vundle manage Vundle, required
+Plugin 'flazz/vim-colorschemes'                 " vim colorschemes
+Plugin 'fatih/vim-go'                           " Go programming language
+Plugin 'bling/vim-airline'                      " Beautiful status bars
+Plugin 'fholgado/minibufexpl.vim'               " Using it for deleting buffer fastly
+Plugin 'kien/ctrlp.vim'                         " Fast file finder just like sublime ctrl+p
+Plugin 'scrooloose/nerdtree'                    " Plugin for listing directory structure
+Plugin 'scrooloose/nerdcommenter'               " Commenter
+Plugin 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
+Plugin 'tpope/vim-fugitive'                     " Plugin for git inside vim
+Plugin 'scrooloose/syntastic'                   " Plugin for error highlighter
+Plugin 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
+Plugin 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
+Plugin 'jelera/vim-javascript-syntax'           " Javascript indentation + Syntax
+Plugin 'godlygeek/tabular'                      " Automatic alignment
+Plugin 'SirVer/ultisnips'                       " Code snippets
+Plugin 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
+Plugin 'cespare/vim-toml'                       " TOML syntax highlighting
+Plugin 'mattn/emmet-vim'                        " Emmet plugin
+Plugin 'gregsexton/MatchTag'                    " Highlight matched tag
+Plugin 'tmhedberg/matchit'                      " Jump between matched tags
+Plugin 'phildawes/racer'                        " Rust auto completer
+Plugin 'wting/rust.vim'                         " Rust syntax highlighting
+Plugin 'myusuf3/numbers.vim'                    " Relative number line
+Plugin 'tpope/vim-surround'                     " Insert text in surrounding selected text
+Plugin 'groenewege/vim-less'                    " Less syntax highlighting
+Plugin 'skammer/vim-css-color'                  " Highlight css hex code based on its hex code(color)
+Plugin 'mustache/vim-mustache-handlebars'       " Highlight handlebars
+Plugin 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
+Plugin 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
+Plugin 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
+Plugin 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
