@@ -20,7 +20,6 @@ else
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 endif
 
-set synmaxcol=120               " Syntax highlighting only the first 120 col
 set lazyredraw
 set colorcolumn=80              " Show vertical ruler that at the 80th column
 set tabstop=4                   " Set tab size to 4
@@ -59,6 +58,7 @@ syntax on
 " Filetypes
 augroup filetypedetect
   au! BufRead,BufNewFile *.hbs,*.handlebars setf handlebars
+  au! BufRead,BufNewFile *.blade.php set filetype=html
 augroup END
 
 
@@ -197,6 +197,7 @@ Plugin 'skammer/vim-css-color'                      " Highlight css hex code bas
 Plugin 'mustache/vim-mustache-handlebars'           " Highlight handlebars
 Plugin 'mileszs/ack.vim'                            " For searching, install http://beyondgrep.com/install first
 Plugin 'editorconfig/editorconfig-vim'              " Vim will read .editorconfig and set the configuration based on it
+Plugin 'xsbeats/vim-blade'                                  " Laravel blade syntax highlighting
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
