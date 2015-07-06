@@ -21,9 +21,4 @@ nnoremap <C-S-v> <ESC>:action SplitVertically<CR>
 nnoremap <C-S-h> <ESC>:action SplitHorizontally<CR>
 nnoremap <C-S-w> <ESC>:action CloseAllEditors<CR>
 
-vnoremap <C-S-j> <A-S-Down>
-vnoremap <C-S-k> <A-S-Up>
-nnoremap <C-S-j> <A-S-Down>
-nnoremap <C-S-k> <A-S-Up>
-
 nnoremap QQ :q<CR>
