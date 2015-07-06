@@ -22,7 +22,7 @@ endif
 
 set lazyredraw
 set colorcolumn=80              " Show vertical ruler that at the 80th column
-set tabstop=4                   " Set tab size to 4
+set tabstop=2                   " Set tab size to 2
 set nocompatible                " be improved, required
 set number                      " turn on number lines
 set showcmd                     " show command on pressing keystrokes
@@ -30,7 +30,7 @@ set autoindent                  " enables auto indentation
 set ruler                       " enables rule<LeftMouse>
 set autoindent                  " always set autoindenting on
 set copyindent                  " copy the previous indentation on autoindenting
-set shiftwidth=4                " number of spaces to use for autoindenting
+set shiftwidth=2                " number of spaces to use for autoindenting
 set encoding=utf-8
 set linespace=2                 " space between lines
 set hlsearch                    " highlight search terms
@@ -47,7 +47,7 @@ set expandtab                   " Indentation using space
 
 " Word wrapping
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
-set wrap                        " Wrap lines, use `set nowrap` if you don't want to wrap
+set nowrap                      " Wrap lines, use `set nowrap` if you don't want to wrap
 set linebreak
 set nolist
 set formatoptions+=t
@@ -279,14 +279,15 @@ let g:webdevicons_enable_airline_tabline = 0
 let g:miniBufExplorerAutoStart = 0         "Just need the command :MBEbd to close current buffer and retain NERDTree
 
 " Vim emmet
-let g:user_emmet_leader_key=','
+let g:user_emmet_leader_key='\'
 
 " Syntatic
 let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
-let g:syntastic_error_symbol = "-"
-let g:syntastic_javascript_checkers = ['jscs', 'jsxhint', 'jshint']
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 
