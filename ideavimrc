@@ -21,4 +21,9 @@ nnoremap <C-S-v> <ESC>:action SplitVertically<CR>
 nnoremap <C-S-h> <ESC>:action SplitHorizontally<CR>
 nnoremap <C-S-w> <ESC>:action CloseAllEditors<CR>
 
+nnoremap <C-k> :action GotoPreviousError<CR>
+nnoremap <C-j> :action GotoNextError<CR>
+
+nnoremap <S-j> :action EditorJoinLines<CR>
+
 nnoremap QQ :q<CR>
