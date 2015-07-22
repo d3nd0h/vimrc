@@ -113,6 +113,12 @@ nmap <silent> <leader>sv :so ~/.vimrc<CR>
 nmap <C-L> 5zl
 nmap <C-H> 5zh
 
+" Tmux navigator key mapping
+nnoremap <silent> <C-W>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-W>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-W>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-W>l :TmuxNavigateRight<cr>
+
 " Comment toggle on normal mode with Ctrl+C
 nmap <C-c> \c<space>
 
@@ -198,6 +204,7 @@ Plugin 'mileszs/ack.vim'                        " For searching, install http://
 Plugin 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
 Plugin 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
 Plugin 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
+Plugin 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
@@ -291,6 +298,8 @@ let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 
+" Tmux navigator
+let g:tmux_navigator_no_mappings = 1
 
 " Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
