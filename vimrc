@@ -5,7 +5,7 @@ let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mi
 let in_macvim = has("gui_macvim")
 let in_terminal = !has('gui_running')
 
-colorscheme custom
+colorscheme solarized_custom
 
 if in_terminal
     colorscheme custom
@@ -44,6 +44,7 @@ set guioptions -=m              " remove menu bar
 set guioptions -=M              " remove menu bar
 set completeopt-=preview        " remove window information hint (on top of main window) after we use tab when autocomplete pops out
 set expandtab                   " Indentation using space
+set nofoldenable                " Disable folding
 
 " Word wrapping
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
@@ -273,7 +274,7 @@ let g:NERDSpaceDelims = 1
 " Go to https://github.com/powerline/fonts if airline fonts is ugly
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
-let g:airline_theme='luna'
+let g:airline_theme='hybrid'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let airline#extensions#tabline#buffer_nr_show = 1
