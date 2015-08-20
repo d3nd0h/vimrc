@@ -206,6 +206,7 @@ Plugin 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig an
 Plugin 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
 Plugin 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
 Plugin 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
+Plugin 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
 Plugin 'easymotion/vim-easymotion'
 
 " If error with airline, reinstall airline to fix
@@ -296,7 +297,7 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 
