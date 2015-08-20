@@ -5,7 +5,7 @@ let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mi
 let in_macvim = has("gui_macvim")
 let in_terminal = !has('gui_running')
 
-colorscheme solarized_custom
+colorscheme custom
 
 if in_terminal
     colorscheme custom
@@ -206,6 +206,7 @@ Plugin 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig an
 Plugin 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
 Plugin 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
 Plugin 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
+Plugin 'easymotion/vim-easymotion'
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
