@@ -1,4 +1,69 @@
 """"""""""""""""""""""""""""""""""""""""""""
+" Load Plugins
+""""""""""""""""""""""""""""""""""""""""""""
+filetype off                                    " required
+set rtp+=~/.vim/bundle/Vundle.vim               " set the runtime path to include Vundle and initialize
+call vundle#begin()                             " alternatively, pass a path where Vundle should install plugins
+                                                " call vundle#begin('~/some/path/here')
+"YouCompleteMe only works in linux/Mac OSX
+if has('unix')
+    Plugin 'Valloric/YouCompleteMe'             " auto popup for autocomplete, without this we need to press <Ctrl+x+o>
+endif
+
+Plugin 'gmarik/Vundle.vim'                      " let Vundle manage Vundle, required
+Plugin 'flazz/vim-colorschemes'                 " vim colorschemes
+Plugin 'fatih/vim-go'                           " Go programming language
+Plugin 'bling/vim-airline'                      " Beautiful status bars
+Plugin 'fholgado/minibufexpl.vim'               " Using it for deleting buffer fastly
+Plugin 'kien/ctrlp.vim'                         " Fast file finder just like sublime ctrl+p
+Plugin 'scrooloose/nerdtree'                    " Plugin for listing directory structure
+Plugin 'scrooloose/nerdcommenter'               " Commenter
+Plugin 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
+Plugin 'tpope/vim-fugitive'                     " Plugin for git inside vim
+Plugin 'scrooloose/syntastic'                   " Plugin for error highlighter
+Plugin 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
+Plugin 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
+Plugin 'jelera/vim-javascript-syntax'           " Javascript indentation + Syntax
+Plugin 'godlygeek/tabular'                      " Automatic alignment
+Plugin 'SirVer/ultisnips'                       " Code snippets
+Plugin 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
+Plugin 'cespare/vim-toml'                       " TOML syntax highlighting
+Plugin 'mattn/emmet-vim'                        " Emmet plugin
+Plugin 'gregsexton/MatchTag'                    " Highlight matched tag
+Plugin 'tmhedberg/matchit'                      " Jump between matched tags
+Plugin 'phildawes/racer'                        " Rust auto completer
+Plugin 'wting/rust.vim'                         " Rust syntax highlighting
+Plugin 'myusuf3/numbers.vim'                    " Relative number line
+Plugin 'tpope/vim-surround'                     " Insert text in surrounding selected text
+Plugin 'groenewege/vim-less'                    " Less syntax highlighting
+Plugin 'skammer/vim-css-color'                  " Highlight css hex code based on its hex code(color)
+Plugin 'mustache/vim-mustache-handlebars'       " Highlight handlebars
+Plugin 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
+Plugin 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
+Plugin 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
+Plugin 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
+Plugin 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
+Plugin 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
+Plugin 'easymotion/vim-easymotion'
+
+" If error with airline, reinstall airline to fix
+" Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
+" Copy fonts in patched-fonts folder to ~/.fonts
+Plugin 'ryanoasis/vim-webdevicons'                  " If error with airline, reinstall airline to fix
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Colorschemes
+"""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'yamafaktory/lumberjack.vim'
+Plugin 'Junza/Spink'
+Plugin 'cseelus/vim-colors-clearance'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+""""""""""""""""""""""""""""""""""""""""""""
 " Vim Settings
 """"""""""""""""""""""""""""""""""""""""""""
 let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mint\n"
@@ -20,6 +85,7 @@ else
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 endif
 
+filetype plugin indent on
 set lazyredraw
 set colorcolumn=80              " Show vertical ruler that at the 80th column
 set tabstop=2                   " Set tab size to 2
@@ -45,10 +111,7 @@ set guioptions -=M              " remove menu bar
 set completeopt-=preview        " remove window information hint (on top of main window) after we use tab when autocomplete pops out
 set expandtab                   " Indentation using space
 set nofoldenable                " Disable folding
-
-" Word wrapping
-" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
-set nowrap                      " Wrap lines, use `set nowrap` if you don't want to wrap
+set nowrap
 set linebreak
 set nolist
 set formatoptions+=t
@@ -62,21 +125,16 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.blade.php set filetype=html
 augroup END
 
-
 autocmd FileType html       : setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType javascript : setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType handlebars : setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType less       : setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType python     : setlocal shiftwidth=4 tabstop=4 expandtab
-
-" automatically trim trailing space everytime we save
-autocmd BufWritePre * :%s/\s\+$//e
-
+autocmd BufWritePre * :%s/\s\+$//e " automatically trim trailing space everytime we save
 
 """"""""""""""""""""""""""""""""""""""""""""
 "MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""
-
 " Remap :w<CR> to Ctrl+s
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>a
@@ -158,87 +216,6 @@ nnoremap <F6> :NumbersToggle<CR>
 nnoremap <F7> :NumbersOnOff<CR>
 
 nnoremap <silent> <leader>nn :NERDTreeToggle<CR>
-
-
-""""""""""""""""""""""""""""""""""""""""""""
-" Load Plugins
-""""""""""""""""""""""""""""""""""""""""""""
-filetype off                                    " required
-set rtp+=~/.vim/bundle/Vundle.vim               " set the runtime path to include Vundle and initialize
-call vundle#begin()                             " alternatively, pass a path where Vundle should install plugins
-                                                " call vundle#begin('~/some/path/here')
-
-"YouCompleteMe only works in linux/Mac OSX
-if has('unix')
-    Plugin 'Valloric/YouCompleteMe'             " auto popup for autocomplete, without this we need to press <Ctrl+x+o>
-endif
-
-Plugin 'gmarik/Vundle.vim'                      " let Vundle manage Vundle, required
-Plugin 'flazz/vim-colorschemes'                 " vim colorschemes
-Plugin 'fatih/vim-go'                           " Go programming language
-Plugin 'bling/vim-airline'                      " Beautiful status bars
-Plugin 'fholgado/minibufexpl.vim'               " Using it for deleting buffer fastly
-Plugin 'kien/ctrlp.vim'                         " Fast file finder just like sublime ctrl+p
-Plugin 'scrooloose/nerdtree'                    " Plugin for listing directory structure
-Plugin 'scrooloose/nerdcommenter'               " Commenter
-Plugin 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
-Plugin 'tpope/vim-fugitive'                     " Plugin for git inside vim
-Plugin 'scrooloose/syntastic'                   " Plugin for error highlighter
-Plugin 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
-Plugin 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
-Plugin 'jelera/vim-javascript-syntax'           " Javascript indentation + Syntax
-Plugin 'godlygeek/tabular'                      " Automatic alignment
-Plugin 'SirVer/ultisnips'                       " Code snippets
-Plugin 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
-Plugin 'cespare/vim-toml'                       " TOML syntax highlighting
-Plugin 'mattn/emmet-vim'                        " Emmet plugin
-Plugin 'gregsexton/MatchTag'                    " Highlight matched tag
-Plugin 'tmhedberg/matchit'                      " Jump between matched tags
-Plugin 'phildawes/racer'                        " Rust auto completer
-Plugin 'wting/rust.vim'                         " Rust syntax highlighting
-Plugin 'myusuf3/numbers.vim'                    " Relative number line
-Plugin 'tpope/vim-surround'                     " Insert text in surrounding selected text
-Plugin 'groenewege/vim-less'                    " Less syntax highlighting
-Plugin 'skammer/vim-css-color'                  " Highlight css hex code based on its hex code(color)
-Plugin 'mustache/vim-mustache-handlebars'       " Highlight handlebars
-Plugin 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
-Plugin 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
-Plugin 'xsbeats/vim-blade'                      " Laravel blade syntax highlighting
-Plugin 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
-Plugin 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
-Plugin 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
-Plugin 'easymotion/vim-easymotion'
-
-" If error with airline, reinstall airline to fix
-" Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
-" Copy fonts in patched-fonts folder to ~/.fonts
-Plugin 'ryanoasis/vim-webdevicons'                  " If error with airline, reinstall airline to fix
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" Colorschemes
-"""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'ajh17/Spacegray.vim'
-Plugin 'gosukiwi/vim-atom-dark'
-Plugin 'yamafaktory/lumberjack.vim'
-Plugin 'Junza/Spink'
-Plugin 'cseelus/vim-colors-clearance'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
