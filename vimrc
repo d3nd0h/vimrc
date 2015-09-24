@@ -45,6 +45,7 @@ Plugin 'StanAngeloff/php.vim'                   " PHP Syntax highlighting
 Plugin 'christoomey/vim-tmux-navigator'         " To navigate between panes seamessly in vim
 Plugin 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
 Plugin 'easymotion/vim-easymotion'
+Plugin 'eagletmt/neco-ghc'                      " Haskell autocomplete
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
