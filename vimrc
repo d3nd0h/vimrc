@@ -71,11 +71,11 @@ let in_linux_mint = system("cat /etc/issue | grep 'Linux Mint' -o") == "Linux Mi
 let in_macvim = has("gui_macvim")
 let in_terminal = !has('gui_running')
 
-colorscheme hybrid
-
 if in_terminal
-    set t_Co=256
+  set t_Co=256
 endif
+
+colorscheme hybrid
 
 if in_linux_mint " Linux Mint
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 15
