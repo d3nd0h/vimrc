@@ -36,7 +36,6 @@ Plugin 'wting/rust.vim'                         " Rust syntax highlighting
 Plugin 'myusuf3/numbers.vim'                    " Relative number line
 Plugin 'tpope/vim-surround'                     " Insert text in surrounding selected text
 Plugin 'groenewege/vim-less'                    " Less syntax highlighting
-Plugin 'skammer/vim-css-color'                  " Highlight css hex code based on its hex code(color)
 Plugin 'mustache/vim-mustache-handlebars'       " Highlight handlebars
 Plugin 'mileszs/ack.vim'                        " For searching, install http://beyondgrep.com/install first
 Plugin 'editorconfig/editorconfig-vim'          " Vim will read .editorconfig and set the configuration based on it
@@ -46,6 +45,7 @@ Plugin 'christoomey/vim-tmux-navigator'         " To navigate between panes seam
 Plugin 'embear/vim-localvimrc'                  " Load local vimrc if exist (Will override global vimrc)
 Plugin 'easymotion/vim-easymotion'
 Plugin 'eagletmt/neco-ghc'                      " Haskell autocomplete
+Plugin 'moll/vim-node'                          " Node plugin
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
