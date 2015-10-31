@@ -46,6 +46,7 @@ Plugin 'embear/vim-localvimrc'                  " Load local vimrc if exist (Wil
 Plugin 'easymotion/vim-easymotion'
 Plugin 'eagletmt/neco-ghc'                      " Haskell autocomplete
 Plugin 'moll/vim-node'                          " Node plugin
+Plugin 'Shougo/vimproc.vim'
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
@@ -222,6 +223,12 @@ nnoremap <silent> <leader>nn :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""
 " Eclim autocomplete with youcompleteme
 let g:EclimCompletionMethod = 'omnifunc'
+
+" Neco GHC
+" Haskell autocompletion using youcompleteme
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:necoghc_enable_detailed_browse = 1
 
 " YouCompleteMe
 if in_macvim
