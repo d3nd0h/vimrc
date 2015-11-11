@@ -87,6 +87,8 @@ else
 endif
 
 filetype plugin indent on
+set splitbelow                  " Set open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitright
 set lazyredraw
 set colorcolumn=80              " Show vertical ruler that at the 80th column
 set tabstop=2                   " Set tab size to 2
