@@ -23,7 +23,7 @@ Plugin 'tpope/vim-fugitive'                     " Plugin for git inside vim
 Plugin 'scrooloose/syntastic'                   " Plugin for error highlighter
 Plugin 'Townk/vim-autoclose'                    " Plugin for autoclose brace () {}
 Plugin 'terryma/vim-multiple-cursors'           " Multiple selection just like in sublime Ctrl + d selection
-Plugin 'jelera/vim-javascript-syntax'           " Javascript indentation + Syntax
+Plugin 'pangloss/vim-javascript'                " Javascript indentation + Syntax
 Plugin 'godlygeek/tabular'                      " Automatic alignment
 Plugin 'SirVer/ultisnips'                       " Code snippets
 Plugin 'honza/vim-snippets'                     " Collection of snippets for ultisnipes
@@ -113,13 +113,15 @@ set guioptions -=m              " remove menu bar
 set guioptions -=M              " remove menu bar
 set completeopt-=preview        " remove window information hint (on top of main window) after we use tab when autocomplete pops out
 set expandtab                   " Indentation using space
-set nofoldenable                " Disable folding
+set foldmethod=indent
+set foldlevelstart=20           " Open 20 folds when first time opening a file
 set nowrap
 set linebreak
 set nolist
 set formatoptions+=t
 set textwidth=0
 set wrapmargin=0
+set timeoutlen=100
 syntax on
 
 " Filetypes
@@ -233,6 +235,7 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:necoghc_enable_detailed_browse = 1
 
 " YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
 if in_macvim
     let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 endif
