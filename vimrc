@@ -157,7 +157,6 @@ nnoremap 6`` :b 6 <CR>
 nnoremap 7`` :b 7 <CR>
 nnoremap 8`` :b 8 <CR>
 nnoremap 9`` :b 9 <CR>
-inoremap <C-[> <Esc><Esc><Esc><Esc>
 
 noremap L $
 noremap H ^
