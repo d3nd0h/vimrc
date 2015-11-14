@@ -121,7 +121,7 @@ set nolist
 set formatoptions+=t
 set textwidth=0
 set wrapmargin=0
-set timeoutlen=200
+set timeoutlen=300
 syntax on
 
 " Filetypes
