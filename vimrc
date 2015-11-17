@@ -227,6 +227,7 @@ let g:necoghc_enable_detailed_browse = 1
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
 
 if in_macvim
     let g:ycm_path_to_python_interpreter = '/usr/bin/python'
