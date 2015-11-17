@@ -147,16 +147,8 @@ inoremap <C-s> <ESC>:w<CR>a
 " Press F3 to check current element highlight-group
 map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
+" Close current buffer
 nnoremap QQ :MBEbd <CR>
-nnoremap 1`` :b 1 <cR>
-nnoremap 2`` :b 2 <CR>
-nnoremap 3`` :b 3 <CR>
-nnoremap 4`` :b 4 <CR>
-nnoremap 5`` :b 5 <CR>
-nnoremap 6`` :b 6 <CR>
-nnoremap 7`` :b 7 <CR>
-nnoremap 8`` :b 8 <CR>
-nnoremap 9`` :b 9 <CR>
 
 noremap L $
 noremap H ^
@@ -235,6 +227,7 @@ let g:necoghc_enable_detailed_browse = 1
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
+
 if in_macvim
     let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 endif
@@ -330,8 +323,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " End
 """""""""""""""""""""""""""""""""""""""""""""""""
 
-
-
 " Golang tagbar solution
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
@@ -374,7 +365,6 @@ hi Cursor guibg=#618AFB guifg=white
 
 " Change cursor color to green when in insert mode
 au InsertEnter * hi Cursor guibg=#618AFB guifg=white ctermbg=39 ctermfg=white
-
 
 hi link rustStorage             PreProc
 hi link mustacheConditionals    Function
