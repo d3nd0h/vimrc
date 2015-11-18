@@ -47,6 +47,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'eagletmt/neco-ghc'                      " Haskell autocomplete
 Plugin 'moll/vim-node'                          " Node plugin
 Plugin 'Shougo/vimproc.vim'
+Plugin 'ternjs/tern_for_vim'
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
@@ -245,6 +246,7 @@ let g:go_highlight_structs = 1
 " Ctrl-P
 " ignore directories
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|vendor)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_prompt_mappings = { 'PrtClearCache()': ['<F2>'] }
 
 " NerdTree
