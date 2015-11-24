@@ -49,6 +49,7 @@ Plugin 'moll/vim-node'                          " Node plugin
 Plugin 'Shougo/vimproc.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'keith/swift.vim'                        " Swift syntax and indent files
+Plugin 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
