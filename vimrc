@@ -31,7 +31,6 @@ Plugin 'cespare/vim-toml'                       " TOML syntax highlighting
 Plugin 'mattn/emmet-vim'                        " Emmet plugin
 Plugin 'gregsexton/MatchTag'                    " Highlight matched tag
 Plugin 'tmhedberg/matchit'                      " Jump between matched tags
-Plugin 'phildawes/racer'                        " Rust auto completer
 Plugin 'wting/rust.vim'                         " Rust syntax highlighting
 Plugin 'myusuf3/numbers.vim'                    " Relative number line
 Plugin 'tpope/vim-surround'                     " Insert text in surrounding selected text
@@ -281,14 +280,16 @@ let g:user_emmet_leader_key='\'
 let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
+let g:syntastic_error_symbol = '×'
 
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
+
+" Vim Tern
+let g:tern_request_timeout = 3
 
 " Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
