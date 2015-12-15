@@ -85,7 +85,7 @@ if in_linux_mint " Linux Mint
 elseif in_macvim " Mac
     set guifont=DejaVu_Sans_Mono_for_Powerline_Plus_Nerd_File_Types_Mono:h13
 else
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 endif
 
 filetype plugin indent on
