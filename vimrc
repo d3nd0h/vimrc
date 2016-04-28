@@ -15,7 +15,7 @@ Plugin 'flazz/vim-colorschemes'                 " vim colorschemes
 Plugin 'fatih/vim-go'                           " Go programming language
 Plugin 'bling/vim-airline'                      " Beautiful status bars
 Plugin 'fholgado/minibufexpl.vim'               " Using it for deleting buffer fastly
-Plugin 'kien/ctrlp.vim'                         " Fast file finder just like sublime ctrl+p
+Plugin 'ctrlpvim/ctrlp.vim'                     " Fast file finder just like sublime ctrl+p
 Plugin 'scrooloose/nerdtree'                    " Plugin for listing directory structure
 Plugin 'scrooloose/nerdcommenter'               " Commenter
 Plugin 'majutsushi/tagbar'                      " Plugin for showing functions and vars description
@@ -49,6 +49,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'keith/swift.vim'                        " Swift syntax and indent files
 Plugin 'rhysd/conflict-marker.vim'              " Jump and resolve git conflicts
+Plugin 'mxw/vim-jsx'                            " React JSX plugin
 
 " If error with airline, reinstall airline to fix
 " Clone https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher first
@@ -155,6 +156,7 @@ nnoremap QQ :MBEbd <CR>
 noremap L $
 noremap H ^
 
+
 " use \" and \- to resize vertical splits
 nnoremap <silent> <leader>= :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
@@ -246,6 +248,7 @@ let g:go_highlight_structs = 1
 
 " Ctrl-P
 " ignore directories
+let g:ctrlp_map = '<c-q>'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|vendor)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_prompt_mappings = { 'PrtClearCache()': ['<F2>'] }
@@ -280,7 +283,8 @@ let g:user_emmet_leader_key='\'
 let g:syntastic_echo_current_error = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
+let b:syntastic_javascript_eslint_exec = 'eslint'
 let g:syntastic_always_populate_loc_list = 1  " Always populate loc list so we can use lnext and lprev to jump to errors
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 let g:syntastic_error_symbol = '×'
@@ -301,6 +305,13 @@ let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 inoremap <c-x><c-k> <c-x><c-k>
+
+" Vim JSX
+" By default, JSX syntax highlighting and indenting will be enabled only
+" for files with the .jsx extension, we want syntax highlighting in .js files
+" too
+let g:jsx_ext_required = 0
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Fix issues between YouCompleteMe and UltiSnips
 """""""""""""""""""""""""""""""""""""""""""""""""
