@@ -1,11 +1,9 @@
 #!/bin/bash
 
 NEOVIM_DIR=$HOME/.config/nvim
+VIM_DIR=$HOME/.vim
 
-if [ ! -d $NEOVIM_DIR ]; then
-    mkdir -p $NEOVIM_DIR
-fi
-
+ln -s $VIM_DIR $NEOVIM_DIR
 ln -s $(pwd)/vimrc $NEOVIM_DIR/init.vim
 ln -s $(pwd)/vimrc ~/.neovimrc
 ln -s $(pwd)/ideavimrc ~/.ideavimrc
