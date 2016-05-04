@@ -14,6 +14,9 @@ vmap <C-x> "+d
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pA
 
+nnoremap <C-h> :xccmd selectNextTab<CR>
+nnoremap <C-l> :xccmd selectPreviousTab<CR>
+
 " Mapping to move lines
 " NOTE: THESE MAPPINGS NEED TO BE CONFIGURED MANUALLY IN XCODE KEY BINDINGS
 " The command :m .+1 (which can be abbreviated to :m+)
