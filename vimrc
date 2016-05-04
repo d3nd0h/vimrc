@@ -77,6 +77,12 @@ let in_terminal = !has('gui_running')
 
 if in_terminal
   set t_Co=256
+else
+  set guioptions -=T              " remove toolbar on gvim
+  set guioptions -=r              " remove right-hand scroll bar
+  set guioptions -=L              " remove left-hand scroll bar
+  set guioptions -=m              " remove menu bar
+  set guioptions -=M              " remove menu bar
 endif
 
 colorscheme hybrid
@@ -109,11 +115,6 @@ set hlsearch                    " highlight search terms
 set hidden                      " Do not delete undo history when switching between buffers
 set nobackup
 set noswapfile
-set guioptions -=T              " remove toolbar on gvim
-set guioptions -=r              " remove right-hand scroll bar
-set guioptions -=L              " remove left-hand scroll bar
-set guioptions -=m              " remove menu bar
-set guioptions -=M              " remove menu bar
 set completeopt-=preview        " remove window information hint (on top of main window) after we use tab when autocomplete pops out
 set expandtab                   " Indentation using space
 set foldmethod=indent
@@ -143,6 +144,8 @@ autocmd BufWritePre * :%s/\s\+$//e " automatically trim trailing space everytime
 """"""""""""""""""""""""""""""""""""""""""""
 "MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""
+let mapleader = ' '
+
 " Remap :w<CR> to Ctrl+s
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>a
@@ -173,10 +176,10 @@ nmap <C-L> 5zl
 nmap <C-H> 5zh
 
 " Tmux navigator key mapping
-nnoremap <silent> <C-W>j :TmuxNavigateDown<cr>
-nnoremap <silent> <C-W>h :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-W>k :TmuxNavigateUp<cr>
-nnoremap <silent> <C-W>l :TmuxNavigateRight<cr>
+nnoremap <silent> <leader>wj :TmuxNavigateDown<cr>
+nnoremap <silent> <leader>wh :TmuxNavigateLeft<cr>
+nnoremap <silent> <leader>wk :TmuxNavigateUp<cr>
+nnoremap <silent> <leader>wl :TmuxNavigateRight<cr>
 
 " Comment toggle on normal mode with Ctrl+C
 nmap <C-c> \c<space>
