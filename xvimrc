@@ -9,10 +9,10 @@ noremap H ^
 " Ctrl+c = copy | Ctrl+v = paste
 " Only works in visual and insert mode to avoid conflict to visual-block key
 " <C-v> in normal mode
-vmap <C-c> "+y
-vmap <C-x> "+d
-vmap <C-v> c<ESC>"+p
-imap <C-v> <ESC>"+pA
+vmap <C-c> :xccmd copy<CR>
+vmap <C-x> :xccmd cut<CR>
+vmap <C-v> c<ESC>:xccmd paste<CR>
+imap <C-v> <ESC>:xccmd paste<CR>
 
 nnoremap <C-h> :xccmd selectNextTab<CR>
 nnoremap <C-l> :xccmd selectPreviousTab<CR>
