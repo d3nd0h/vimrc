@@ -12,7 +12,7 @@ noremap H ^
 vmap <C-c> :xccmd copy<CR>
 vmap <C-x> :xccmd cut<CR>
 vmap <C-v> c<ESC>:xccmd paste<CR>
-imap <C-v> <ESC>:xccmd paste<CR>
+imap <C-v> <Space><ESC>:xccmd paste<CR>x
 
 nnoremap <C-h> :xccmd selectNextTab<CR>
 nnoremap <C-l> :xccmd selectPreviousTab<CR>
