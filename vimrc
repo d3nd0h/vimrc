@@ -156,8 +156,8 @@ map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 " Close current buffer
 nnoremap QQ :MBEbd <CR>
 
-noremap L $
-noremap H ^
+noremap L g_
+norema  H ^
 
 
 " use \" and \- to resize vertical splits
