@@ -13,7 +13,8 @@ endif
 Plugin 'gmarik/Vundle.vim'                      " let Vundle manage Vundle, required
 Plugin 'flazz/vim-colorschemes'                 " vim colorschemes
 Plugin 'fatih/vim-go'                           " Go programming language
-Plugin 'bling/vim-airline'                      " Beautiful status bars
+Plugin 'vim-airline/vim-airline'                " Beautiful status bars
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'fholgado/minibufexpl.vim'               " Using it for deleting buffer fastly
 Plugin 'ctrlpvim/ctrlp.vim'                     " Fast file finder just like sublime ctrl+p
 Plugin 'scrooloose/nerdtree'                    " Plugin for listing directory structure
